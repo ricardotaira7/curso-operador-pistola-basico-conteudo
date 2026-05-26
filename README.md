@@ -1,1 +1,1 @@
-# curso-pistola-basico
+# curso-operador-pistola-basico-conteudo
