@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Curso Operador de Pistola Básico | Ricardo Taira & Flávio Barreto</title>
+<title>Curso Operador de Pistola Básico | Ricardo Taira, Flávio Barretto & Judson Almeida</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -168,6 +168,29 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 .part-desc{font-size:1.05rem;color:var(--gray-lt);line-height:1.6;}
 
 
+
+/* ── CERTIFICADOS ── */
+.cert-section{background:linear-gradient(135deg,var(--bg3),#1a1500);border:1px solid var(--gold-dk);border-radius:var(--r);padding:18px;margin:28px 14px 24px;}
+.cert-header{display:flex;align-items:center;gap:14px;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none;}
+.cert-icon{flex-shrink:0;width:48px;height:48px;background:var(--gold);color:var(--bg);font-size:1.6rem;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.cert-info{flex:1;}
+.cert-title{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--gold);letter-spacing:.06em;line-height:1;}
+.cert-sub{font-family:'Barlow Condensed',sans-serif;font-size:1rem;color:var(--gray-lt);letter-spacing:.08em;margin-top:4px;}
+.cert-toggle{color:var(--gold);font-size:1.4rem;transition:transform .3s;}
+.cert-section.open .cert-toggle{transform:rotate(180deg);}
+.cert-list{display:none;margin-top:18px;padding-top:18px;border-top:1px solid var(--line);}
+.cert-section.open .cert-list{display:block;}
+.cert-row{display:flex;align-items:flex-start;gap:14px;padding:14px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px;}
+.cert-row-num{flex-shrink:0;width:38px;height:38px;background:var(--gold-dk);color:var(--gold-lt);font-family:'Bebas Neue',sans-serif;font-size:1.1rem;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.cert-row-info{flex:1;min-width:0;}
+.cert-row-name{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;color:var(--white);letter-spacing:.02em;margin-bottom:6px;line-height:1.3;}
+.cert-row-meta{display:flex;flex-direction:column;gap:4px;}
+.cert-id{font-family:'Barlow Condensed',sans-serif;font-size:.92rem;color:var(--gold);font-weight:600;letter-spacing:.04em;}
+.cert-cpf{font-family:'Barlow Condensed',sans-serif;font-size:.9rem;color:var(--gray);letter-spacing:.04em;}
+.cert-footer{text-align:center;margin-top:14px;padding:12px;background:rgba(46,125,50,.06);border:1px solid rgba(46,125,50,.2);border-radius:var(--r);}
+.cert-footer-text{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;color:#81c784;letter-spacing:.06em;line-height:1.5;}
+.cert-footer-text strong{color:#66bb6a;}
+
 /* ── BACK TO TOP ── */
 .btn-top{position:fixed;bottom:20px;right:20px;z-index:998;width:48px;height:48px;background:var(--gold);color:var(--bg);border:none;border-radius:50%;font-size:1.4rem;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.4);-webkit-tap-highlight-color:transparent;transition:opacity .3s,transform .3s;}
 .btn-top.show{display:flex;}
@@ -218,7 +241,8 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
   <div class="sub-title" style="margin:18px 0 10px;justify-content:center;">Instrutores</div>
   <div class="inst-row">
     <div class="inst-pill">🎯 <strong>Ricardo Taira</strong> · IAT · <a href="https://instagram.com/ricardo_taira" target="_blank">@ricardo_taira</a></div>
-    <div class="inst-pill">🎯 <strong>Flávio Barreto</strong> · IAT · <a href="https://www.instagram.com/barrettoflavio/" target="_blank">@barrettoflavio</a></div>
+    <div class="inst-pill">🎯 <strong>Flávio Barretto</strong> · IAT · <a href="https://www.instagram.com/barrettoflavio/" target="_blank">@barrettoflavio</a></div>
+    <div class="inst-pill">🎯 <strong>Judson Almeida</strong> · IAT · <a href="https://instagram.com/judsonskull51" target="_blank">@judsonskull51</a></div>
   </div>
 
   <div class="local-box">
@@ -226,7 +250,157 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
     <div class="lb-addr">Núcleo Rural Vargem da Benção<br>Recanto das Emas · Brasília/DF · CEP 72610-000</div>
     <a href="https://maps.app.goo.gl/VwmnWWwC4dAkhJuP9" target="_blank">📍 Abrir no Google Maps →</a>
   </div>
+
+
+  <!-- ══════ CERTIFICADOS ══════ -->
+<div class="cert-section" id="certSection">
+  <div class="cert-header" onclick="toggleCert()">
+    <div class="cert-icon">📜</div>
+    <div class="cert-info">
+      <div class="cert-title">Alunos Certificados</div>
+      <div class="cert-sub">18 alunos · Operador de Pistola Básico · 2026</div>
+    </div>
+    <div class="cert-toggle">▼</div>
+  </div>
+
+  <div class="cert-list">
+    <div class="cert-row">
+      <div class="cert-row-num">01</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Samara Santana Tavares</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0001</span><span class="cert-cpf">CPF: XXX.452.91X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">02</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Matheus Bastos de Miranda</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0002</span><span class="cert-cpf">CPF: XXX.141.81X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">03</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Laís da Silva Lacerda</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0003</span><span class="cert-cpf">CPF: XXX.592.77X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">04</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Wenderson Brito de Paula</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0004</span><span class="cert-cpf">CPF: XXX.475.74X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">05</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Andréia Cândida De Jesus</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0005</span><span class="cert-cpf">CPF: XXX.414.19X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">06</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Estevão Alves da Silva Filho</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0006</span><span class="cert-cpf">CPF: XXX.513.56X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">07</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Carlos Eduardo Araújo Pinto</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0007</span><span class="cert-cpf">CPF: XXX.819.36X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">08</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Nicolas Teixeira Costa</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0008</span><span class="cert-cpf">CPF: XXX.655.31X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">09</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Sarah Evelyn Porto Costa</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0009</span><span class="cert-cpf">CPF: XXX.435.00X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">10</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Rosineide da Costa Carvalho</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0010</span><span class="cert-cpf">CPF: XXX.559.75X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">11</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Eduarda da Silva Ribeiro</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0011</span><span class="cert-cpf">CPF: XXX.497.75X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">12</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Dejeane Costa Dias Martins</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0012</span><span class="cert-cpf">CPF: XXX.903.40X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">13</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Silvana Vieira Oliveira</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0013</span><span class="cert-cpf">CPF: XXX.251.59X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">14</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Ana Karolina Reis</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0014</span><span class="cert-cpf">CPF: XXX.067.55X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">15</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Paloma Ferreira do Nascimento de Araújo</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0015</span><span class="cert-cpf">CPF: XXX.354.88X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">16</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Sávio Araújo Mendes</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0016</span><span class="cert-cpf">CPF: XXX.419.20X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">17</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Fábio José dos Reis</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0017</span><span class="cert-cpf">CPF: XXX.419.42X-XX</span></div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-row-num">18</div>
+      <div class="cert-row-info">
+        <div class="cert-row-name">Adilson Barbosa Araujo</div>
+        <div class="cert-row-meta"><span class="cert-id">CERT-OPB-2026-0018</span><span class="cert-cpf">CPF: XXX.039.04X-XX</span></div>
+      </div>
+    </div>
+
+    <div class="cert-footer">
+      <div class="cert-footer-text">
+        ✅ <strong>Certificados emitidos pelos instrutores Ricardo Taira, Flávio Barretto e Judson Almeida</strong><br>
+        Instrutores formados em curso credenciado pela Polícia Federal
+      </div>
+    </div>
+  </div>
 </div>
+
+  </div>
 
 <!-- ══════ STICKY: PROGRESS + NAV ══════ -->
 <div class="sticky-bar">
@@ -256,6 +430,9 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 <!-- ═══════════════════════════════════════════
      MÓDULO 1 — 10 REGRAS DE SEGURANÇA
      ═══════════════════════════════════════════ -->
+
+
+
 <div class="modulo" id="m1">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">01</div>
@@ -331,77 +508,91 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 </div>
 
 <!-- ═══ MÓDULO 2 — CONDUTA NA PISTA ═══ -->
+
 <div class="modulo" id="m2">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">02</div>
     <div class="mod-info">
-      <div class="mod-tag">Módulo 02 · Segurança</div>
-      <div class="mod-title">Conduta na Pista de Tiro</div>
+      <div class="mod-tag">Módulo 02 · Armamento</div>
+      <div class="mod-title">Partes da Pistola</div>
     </div>
     <div class="mod-toggle">▼</div>
   </div>
   <div class="mod-body">
-    <p class="txt">A pista de tiro é um ambiente controlado. <strong>O instrutor comanda tudo.</strong> Você só faz o que for mandado, na hora que for mandado.</p>
+    <p class="txt">Vamos conhecer as peças da pistola. Saber o nome de cada parte ajuda na comunicação com o instrutor e no manuseio seguro.</p>
 
-    <div class="callout callout-danger">
-      <strong>⚠️ PRIORIDADE MÁXIMA:</strong> Tudo na pista acontece por COMANDO do instrutor. Sem comando, você não toca na arma, não carrega, não atira. Se ouvir "CESSAR FOGO", pare IMEDIATAMENTE o que estiver fazendo.
+    <img src="https://i.imgur.com/psmKrZn.png" alt="Partes da Beretta 92" class="img-click" onclick="openLB(this.src)">
+
+    <div class="sub-title">12 Partes Principais</div>
+
+    <div class="part-card">
+      <div class="part-num">1</div>
+      <div class="part-info"><div class="part-name">Massa de Mira</div><div class="part-desc">Ponto na frente do ferrolho, em cima. É onde você FOCA o olho para mirar.</div></div>
     </div>
 
-    <div class="sub-title">Equipamentos de Proteção (EPI)</div>
-    <div class="two-col">
-      <div class="col-card">
-        <span class="cc-icon">🔇</span>
-        <div class="cc-title">Protetor de Ouvido</div>
-        <div class="cc-text">Abafador ou tampão. Obrigatório durante toda a permanência na pista.</div>
-      </div>
-      <div class="col-card">
-        <span class="cc-icon">🥽</span>
-        <div class="cc-title">Óculos de Proteção</div>
-        <div class="cc-text">Protege contra estojos quentes, fragmentos e gases. Uso permanente.</div>
-      </div>
+    <div class="part-card">
+      <div class="part-num">2</div>
+      <div class="part-info"><div class="part-name">Alça de Mira</div><div class="part-desc">Entalhe atrás do ferrolho. A massa de mira deve ficar centralizada dentro desse entalhe.</div></div>
     </div>
 
-    <div class="sub-title">Comandos do Instrutor</div>
-    
-    <div class="cmd-card">
-      <div class="cmd-name">🟢 "Pista Quente"</div>
-      <div class="cmd-desc">A pista está ativa. Pode-se manusear armas conforme orientação do instrutor.</div>
+    <div class="part-card">
+      <div class="part-num">3</div>
+      <div class="part-info"><div class="part-name">Cano</div><div class="part-desc">Tubo por onde o projétil sai. Por dentro tem ranhuras em espiral (raiamento) que fazem o projétil girar.</div></div>
     </div>
 
-    <div class="cmd-card">
-      <div class="cmd-name">🔴 "Pista Fria"</div>
-      <div class="cmd-desc">Arma descarregada, ferrolho aberto, na bancada. NINGUÉM toca em nenhuma arma. Momento de trocar alvos ou verificar a pista.</div>
+    <div class="part-card">
+      <div class="part-num">4</div>
+      <div class="part-info"><div class="part-name">Ferrolho / Slide</div><div class="part-desc">Peça que desliza em cima da arma. Serve para câmarar a munição, selar a câmara e ejetar o estojo vazio.</div></div>
     </div>
 
-    <div class="cmd-card">
-      <div class="cmd-name">📥 "Carregar"</div>
-      <div class="cmd-desc">Insira o carregador na arma. Empurre até encaixar. Aguarde o próximo comando.</div>
+    <div class="part-card">
+      <div class="part-num">5</div>
+      <div class="part-info"><div class="part-name">Retém do Ferrolho</div><div class="part-desc">Alavanca que segura o ferrolho na posição aberta (para trás). Quando acaba a munição, o ferrolho trava aberto sozinho.</div></div>
     </div>
 
-    <div class="cmd-card">
-      <div class="cmd-name">🔧 "Alimentar"</div>
-      <div class="cmd-desc">Puxe o ferrolho para trás e solte para colocar a munição na câmara. A arma está pronta. Aguarde.</div>
+    <div class="part-card">
+      <div class="part-num">6</div>
+      <div class="part-info"><div class="part-name">Alavanca de Desmontagem</div><div class="part-desc">Peça que permite desmontar a arma para limpeza. Ao girá-la ou puxá-la, libera o ferrolho da armação.</div></div>
     </div>
 
-    <div class="cmd-card">
-      <div class="cmd-name">💥 "Fogo" (ou apito)</div>
-      <div class="cmd-desc">Pode disparar. Siga o ritmo e as instruções de cada exercício.</div>
+    <div class="part-card">
+      <div class="part-num">7</div>
+      <div class="part-info"><div class="part-name">Gatilho</div><div class="part-desc">A peça que você aperta com o dedo indicador para disparar. Fica protegida dentro do guarda-mato.</div></div>
     </div>
 
-    <div class="cmd-card" style="border-color:rgba(178,34,34,.3);background:rgba(178,34,34,.06);">
-      <div class="cmd-name" style="color:#ef5350;">⛔ "Cessar Fogo"</div>
-      <div class="cmd-desc">PARE imediatamente. Dedo fora do gatilho, arma apontada para o alvo, aguarde instrução. <strong>Qualquer pessoa pode dar este comando em caso de emergência.</strong></div>
+    <div class="part-card">
+      <div class="part-num">8</div>
+      <div class="part-info"><div class="part-name">Cão (Martelo)</div><div class="part-desc">Peça que, ao ser liberada pelo gatilho, golpeia o percussor para iniciar o disparo. Fica na parte traseira da arma.</div></div>
     </div>
 
-    <div class="callout callout-ok">
-      <strong>✅ VESTUÁRIO:</strong> Calçado fechado obrigatório (estojos quentes caem no chão). Gola fechada (estojo pode cair dentro da roupa). Cabelo preso se for comprido.
+    <div class="part-card">
+      <div class="part-num">9</div>
+      <div class="part-info"><div class="part-name">Trava Manual</div><div class="part-desc">Alavanca de segurança que impede o disparo quando ativada. Importante: a trava NÃO substitui as regras de segurança.</div></div>
     </div>
 
-    
+    <div class="part-card">
+      <div class="part-num">10</div>
+      <div class="part-info"><div class="part-name">Retém do Carregador</div><div class="part-desc">Botão que, quando pressionado, solta o carregador da arma. Geralmente fica ao lado do gatilho.</div></div>
     </div>
+
+    <div class="part-card">
+      <div class="part-num">11</div>
+      <div class="part-info"><div class="part-name">Carregador</div><div class="part-desc">O "pente" removível que guarda as munições. Encaixa na base do cabo (punho) da arma.</div></div>
+    </div>
+
+    <div class="part-card">
+      <div class="part-num">12</div>
+      <div class="part-info"><div class="part-name">Cabo (Punho)</div><div class="part-desc">A parte de baixo da arma onde a mão segura. Dentro dele ficam as peças do mecanismo de disparo.</div></div>
+    </div>
+
+    <div class="callout callout-tip">
+      <strong>💡 CLIQUE NA IMAGEM</strong> para ver em tamanho maior e identificar cada peça numerada na pistola.
+    </div>
+  </div>
 </div>
 
-<!-- ═══ MÓDULO 03 — MANUSEIO SEGURO ═══ -->
+<!-- ═══ MÓDULO 4 — FUNCIONAMENTO ═══ -->
+
 <div class="modulo" id="m3">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">03</div>
@@ -523,94 +714,12 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 </div>
 
 <!-- ═══ MÓDULO 3 — PARTES DA PISTOLA ═══ -->
+
 <div class="modulo" id="m4">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">04</div>
     <div class="mod-info">
       <div class="mod-tag">Módulo 04 · Armamento</div>
-      <div class="mod-title">Partes da Pistola</div>
-    </div>
-    <div class="mod-toggle">▼</div>
-  </div>
-  <div class="mod-body">
-    <p class="txt">Vamos conhecer as peças da pistola. Saber o nome de cada parte ajuda na comunicação com o instrutor e no manuseio seguro.</p>
-
-    <img src="https://i.imgur.com/psmKrZn.png" alt="Partes da Beretta 92" class="img-click" onclick="openLB(this.src)">
-
-    <div class="sub-title">12 Partes Principais</div>
-
-    <div class="part-card">
-      <div class="part-num">1</div>
-      <div class="part-info"><div class="part-name">Massa de Mira</div><div class="part-desc">Ponto na frente do ferrolho, em cima. É onde você FOCA o olho para mirar.</div></div>
-    </div>
-
-    <div class="part-card">
-      <div class="part-num">2</div>
-      <div class="part-info"><div class="part-name">Alça de Mira</div><div class="part-desc">Entalhe atrás do ferrolho. A massa de mira deve ficar centralizada dentro desse entalhe.</div></div>
-    </div>
-
-    <div class="part-card">
-      <div class="part-num">3</div>
-      <div class="part-info"><div class="part-name">Cano</div><div class="part-desc">Tubo por onde o projétil sai. Por dentro tem ranhuras em espiral (raiamento) que fazem o projétil girar.</div></div>
-    </div>
-
-    <div class="part-card">
-      <div class="part-num">4</div>
-      <div class="part-info"><div class="part-name">Ferrolho / Slide</div><div class="part-desc">Peça que desliza em cima da arma. Serve para câmarar a munição, selar a câmara e ejetar o estojo vazio.</div></div>
-    </div>
-
-    <div class="part-card">
-      <div class="part-num">5</div>
-      <div class="part-info"><div class="part-name">Retém do Ferrolho</div><div class="part-desc">Alavanca que segura o ferrolho na posição aberta (para trás). Quando acaba a munição, o ferrolho trava aberto sozinho.</div></div>
-    </div>
-
-    <div class="part-card">
-      <div class="part-num">6</div>
-      <div class="part-info"><div class="part-name">Alavanca de Desmontagem</div><div class="part-desc">Peça que permite desmontar a arma para limpeza. Ao girá-la ou puxá-la, libera o ferrolho da armação.</div></div>
-    </div>
-
-    <div class="part-card">
-      <div class="part-num">7</div>
-      <div class="part-info"><div class="part-name">Gatilho</div><div class="part-desc">A peça que você aperta com o dedo indicador para disparar. Fica protegida dentro do guarda-mato.</div></div>
-    </div>
-
-    <div class="part-card">
-      <div class="part-num">8</div>
-      <div class="part-info"><div class="part-name">Cão (Martelo)</div><div class="part-desc">Peça que, ao ser liberada pelo gatilho, golpeia o percussor para iniciar o disparo. Fica na parte traseira da arma.</div></div>
-    </div>
-
-    <div class="part-card">
-      <div class="part-num">9</div>
-      <div class="part-info"><div class="part-name">Trava Manual</div><div class="part-desc">Alavanca de segurança que impede o disparo quando ativada. Importante: a trava NÃO substitui as regras de segurança.</div></div>
-    </div>
-
-    <div class="part-card">
-      <div class="part-num">10</div>
-      <div class="part-info"><div class="part-name">Retém do Carregador</div><div class="part-desc">Botão que, quando pressionado, solta o carregador da arma. Geralmente fica ao lado do gatilho.</div></div>
-    </div>
-
-    <div class="part-card">
-      <div class="part-num">11</div>
-      <div class="part-info"><div class="part-name">Carregador</div><div class="part-desc">O "pente" removível que guarda as munições. Encaixa na base do cabo (punho) da arma.</div></div>
-    </div>
-
-    <div class="part-card">
-      <div class="part-num">12</div>
-      <div class="part-info"><div class="part-name">Cabo (Punho)</div><div class="part-desc">A parte de baixo da arma onde a mão segura. Dentro dele ficam as peças do mecanismo de disparo.</div></div>
-    </div>
-
-    <div class="callout callout-tip">
-      <strong>💡 CLIQUE NA IMAGEM</strong> para ver em tamanho maior e identificar cada peça numerada na pistola.
-    </div>
-  </div>
-</div>
-
-<!-- ═══ MÓDULO 4 — FUNCIONAMENTO ═══ -->
-<div class="modulo" id="m5">
-  <div class="mod-header" onclick="toggle(this)">
-    <div class="mod-num">05</div>
-    <div class="mod-info">
-      <div class="mod-tag">Módulo 05 · Armamento</div>
       <div class="mod-title">Como a Pistola Funciona</div>
     </div>
     <div class="mod-toggle">▼</div>
@@ -673,11 +782,12 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 </div>
 
 <!-- ═══ MÓDULO 5 — MUNIÇÃO ═══ -->
-<div class="modulo" id="m6">
+
+<div class="modulo" id="m5">
   <div class="mod-header" onclick="toggle(this)">
-    <div class="mod-num">06</div>
+    <div class="mod-num">05</div>
     <div class="mod-info">
-      <div class="mod-tag">Módulo 06 · Munição</div>
+      <div class="mod-tag">Módulo 05 · Munição</div>
       <div class="mod-title">Tipos de Munição</div>
     </div>
     <div class="mod-toggle">▼</div>
@@ -736,9 +846,85 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 <!-- ═══════════════════════════════════
      FUNDAMENTOS DO TIRO (M06-M10)
      ═══════════════════════════════════ -->
+
+
 <div class="fund-divider">🎯 FUNDAMENTOS DO TIRO</div>
 
-<!-- ═══ MÓDULO 6 — POSTURA ═══ -->
+<div class="modulo" id="m6">
+  <div class="mod-header" onclick="toggle(this)">
+    <div class="mod-num">06</div>
+    <div class="mod-info">
+      <div class="mod-tag">Módulo 06 · Segurança</div>
+      <div class="mod-title">Conduta na Pista de Tiro</div>
+    </div>
+    <div class="mod-toggle">▼</div>
+  </div>
+  <div class="mod-body">
+    <p class="txt">A pista de tiro é um ambiente controlado. <strong>O instrutor comanda tudo.</strong> Você só faz o que for mandado, na hora que for mandado.</p>
+
+    <div class="callout callout-danger">
+      <strong>⚠️ PRIORIDADE MÁXIMA:</strong> Tudo na pista acontece por COMANDO do instrutor. Sem comando, você não toca na arma, não carrega, não atira. Se ouvir "CESSAR FOGO", pare IMEDIATAMENTE o que estiver fazendo.
+    </div>
+
+    <div class="sub-title">Equipamentos de Proteção (EPI)</div>
+    <div class="two-col">
+      <div class="col-card">
+        <span class="cc-icon">🔇</span>
+        <div class="cc-title">Protetor de Ouvido</div>
+        <div class="cc-text">Abafador ou tampão. Obrigatório durante toda a permanência na pista.</div>
+      </div>
+      <div class="col-card">
+        <span class="cc-icon">🥽</span>
+        <div class="cc-title">Óculos de Proteção</div>
+        <div class="cc-text">Protege contra estojos quentes, fragmentos e gases. Uso permanente.</div>
+      </div>
+    </div>
+
+    <div class="sub-title">Comandos do Instrutor</div>
+    
+    <div class="cmd-card">
+      <div class="cmd-name">🟢 "Pista Quente"</div>
+      <div class="cmd-desc">A pista está ativa. Pode-se manusear armas conforme orientação do instrutor.</div>
+    </div>
+
+    <div class="cmd-card">
+      <div class="cmd-name">🔴 "Pista Fria"</div>
+      <div class="cmd-desc">Arma descarregada, ferrolho aberto, na bancada. NINGUÉM toca em nenhuma arma. Momento de trocar alvos ou verificar a pista.</div>
+    </div>
+
+    <div class="cmd-card">
+      <div class="cmd-name">📥 "Carregar"</div>
+      <div class="cmd-desc">Insira o carregador na arma. Empurre até encaixar. Aguarde o próximo comando.</div>
+    </div>
+
+    <div class="cmd-card">
+      <div class="cmd-name">🔧 "Alimentar"</div>
+      <div class="cmd-desc">Puxe o ferrolho para trás e solte para colocar a munição na câmara. A arma está pronta. Aguarde.</div>
+    </div>
+
+    <div class="cmd-card">
+      <div class="cmd-name">💥 "Fogo" (ou apito)</div>
+      <div class="cmd-desc">Pode disparar. Siga o ritmo e as instruções de cada exercício.</div>
+    </div>
+
+    <div class="cmd-card" style="border-color:rgba(178,34,34,.3);background:rgba(178,34,34,.06);">
+      <div class="cmd-name" style="color:#ef5350;">⛔ "Cessar Fogo"</div>
+      <div class="cmd-desc">PARE imediatamente. Dedo fora do gatilho, arma apontada para o alvo, aguarde instrução. <strong>Qualquer pessoa pode dar este comando em caso de emergência.</strong></div>
+    </div>
+
+    <div class="callout callout-ok">
+      <strong>✅ VESTUÁRIO:</strong> Calçado fechado obrigatório (estojos quentes caem no chão). Gola fechada (estojo pode cair dentro da roupa). Cabelo preso se for comprido.
+    </div>
+
+    
+    </div>
+</div>
+
+<!-- ═══ MÓDULO 03 — MANUSEIO SEGURO ═══ -->
+
+
+<div class="fund-divider">🎯 FUNDAMENTOS DO TIRO</div>
+
 <div class="modulo" id="m7">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">07</div>
@@ -794,6 +980,7 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 </div>
 
 <!-- ═══ MÓDULO 7 — EMPUNHADURA / PEGADA ═══ -->
+
 <div class="modulo" id="m8">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">08</div>
@@ -853,6 +1040,7 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 </div>
 
 <!-- ═══ MÓDULO 8 — VISADA ═══ -->
+
 <div class="modulo" id="m9">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">09</div>
@@ -898,6 +1086,7 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 </div>
 
 <!-- ═══ MÓDULO 9 — RESPIRAÇÃO ═══ -->
+
 <div class="modulo" id="m10">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">10</div>
@@ -948,6 +1137,7 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 </div>
 
 <!-- ═══ MÓDULO 10 — ACIONAMENTO DO GATILHO ═══ -->
+
 <div class="modulo" id="m11">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">11</div>
@@ -1002,6 +1192,7 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 
 
 <!-- ═══ MÓDULO 12 — CONTROLE DO RECUO ═══ -->
+
 <div class="modulo" id="m12">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">12</div>
@@ -1067,9 +1258,12 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
   </div>
 </div>
 
+
 <div class="section-divider"></div>
 
-<!-- ═══ MÓDULO 11 — PANES E INCIDENTES ═══ -->
+
+<div class="section-divider"></div>
+
 <div class="modulo" id="m13">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">13</div>
@@ -1173,6 +1367,7 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 </div>
 
 <!-- ═══ MÓDULO 11 — DISPAROS PRÁTICOS ═══ -->
+
 <div class="modulo" id="m14">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">14</div>
@@ -1191,7 +1386,7 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
       <div class="cmd-desc">Calibre real de defesa. Recuo mais forte, som mais alto. Aqui você vai sentir a diferença e aplicar tudo que aprendeu.</div>
     </div>
     <div class="cmd-card" style="border-color:var(--gold);background:rgba(201,168,76,.06);">
-      <div class="cmd-name" style="color:var(--gold);">🎁 5 tiros calibre 12 — CORTESIA</div>
+      <div class="cmd-name" style="color:var(--gold);">🎁 3 tiros calibre 12 — CORTESIA</div>
       <div class="cmd-desc">Espingarda! Um presente nosso para você. Experiência única, recuo forte, som impressionante. Pura diversão com segurança.</div>
     </div>
 
@@ -1236,6 +1431,7 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 </div>
 
 <!-- ═══ MÓDULO 12 — CORREÇÃO DE ERROS ═══ -->
+
 <div class="modulo" id="m15">
   <div class="mod-header" onclick="toggle(this)">
     <div class="mod-num">15</div>
@@ -1338,7 +1534,8 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
     <h4>Passo 5 — Funções da Equipe</h4>
     <p>
       🩺 <strong>Socorrista Principal:</strong> Ricardo Taira (APH Tático)<br>
-      🚗 <strong>Motorista Principal:</strong> Flávio Barreto<br>
+      🚗 <strong>Motorista Principal:</strong> Flávio Barretto<br>
+      👮 <strong>Apoio Tático:</strong> Judson Almeida<br>
       📞 <strong>Auxiliar:</strong> Ligar para os serviços de emergência
     </p>
   </div>
@@ -1376,7 +1573,7 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
   </div>
 
   <div class="callout callout-ok" style="margin-top:14px;">
-    <strong>✅ SEGURANÇA:</strong> Os instrutores Ricardo Taira e Flávio Barreto possuem formação em APH Tático com equipamentos de socorro (torniquete, curativo israelense, chest seal) disponíveis no local. O Clube de Tiro Matsumoto também conta com kit de primeiros socorros.
+    <strong>✅ SEGURANÇA:</strong> Os instrutores Ricardo Taira, Flávio Barretto e Judson Almeida possuem formação em APH Tático com equipamentos de socorro (torniquete, curativo israelense, chest seal) disponíveis no local. O Clube de Tiro Matsumoto também conta com kit de primeiros socorros.
   </div>
 </div>
 
@@ -1392,10 +1589,18 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
 
   <div style="width:50px;height:1px;background:var(--line);margin:0 auto 12px;"></div>
 
-  <div style="background:var(--bg3);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin-bottom:16px;text-align:center;">
-    <div class="footer-logo">FLÁVIO BARRETO</div>
+  <div style="background:var(--bg3);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin-bottom:12px;text-align:center;">
+    <div class="footer-logo">FLÁVIO BARRETTO</div>
     <div class="footer-sub" style="margin-bottom:6px;">Instrutor de Armamento e Tiro — IAT</div>
     <a href="https://www.instagram.com/barrettoflavio/" target="_blank" class="footer-ig">📸 @barrettoflavio</a>
+  </div>
+
+  <div style="width:50px;height:1px;background:var(--line);margin:0 auto 12px;"></div>
+
+  <div style="background:var(--bg3);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin-bottom:16px;text-align:center;">
+    <div class="footer-logo">JUDSON ALMEIDA</div>
+    <div class="footer-sub" style="margin-bottom:6px;">Instrutor de Armamento e Tiro — IAT</div>
+    <a href="https://instagram.com/judsonskull51" target="_blank" class="footer-ig">📸 @judsonskull51</a>
   </div>
 
   <div style="width:50px;height:1px;background:var(--line);margin:0 auto 16px;"></div>
@@ -1403,7 +1608,6 @@ main{position:relative;z-index:1;max-width:680px;margin:0 auto;}
   <div class="footer-sub" style="line-height:1.5;">Formados pela Combat Tático<br>Escola de Formação credenciada pela Polícia Federal</div>
   <div class="footer-copy">© 2026 Ricardo Taira · Todos os direitos reservados</div>
 </footer>
-
 
 <button class="btn-top" id="btnTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <!-- ══════ LIGHTBOX ══════ -->
@@ -1497,6 +1701,11 @@ window.addEventListener('scroll',function(){
 });
 
 updateProgress();
+
+
+function toggleCert(){
+  document.getElementById('certSection').classList.toggle('open');
+}
 
 // ── LIGHTBOX ──
 function openLB(src){
